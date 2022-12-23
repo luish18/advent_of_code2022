@@ -1,7 +1,5 @@
 fn play_points(play: &str) -> u32 {
-
     match play {
-
         "A X" => 3,
         "A Y" => 4,
         "A Z" => 8,
@@ -16,11 +14,10 @@ fn play_points(play: &str) -> u32 {
 }
 
 fn main() {
-    
-    let points: u32 =  include_str!("../input.txt")
-    .lines()
-    .map(|x| play_points(x))
-    .sum();
+    let points: u32 = include_str!("../input.txt")
+        .lines()
+        .map(|x| play_points(x))
+        .sum();
 
     println!("{points}");
 }
